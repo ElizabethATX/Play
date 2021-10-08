@@ -1,0 +1,23 @@
+{
+	"name": "CR Premium",
+	"version": "2.3",
+	"description": "Mira a tus waifus favoritas.",
+	"author": "itallolegal v2 - Elizabeth v2",
+	"icons": { "48": "icon.png" },
+	"browser_action":{
+		"default_title": "CR Premium",
+		"default_popup": "popup.html",
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		  "storage"
+        ],
+	"content_scripts": [
+    {
+        "matches": ["http://www.crunchyroll.com/*", "https://www.crunchyroll.com/*"],
+        "css": ["content.css"],
+        "js": ["content.js"]
+    }
+],
+	"manifest_version": 2
+}
