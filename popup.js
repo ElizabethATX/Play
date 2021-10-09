@@ -11,9 +11,9 @@ cooldown.onchange = () => {
 
 chrome.storage.sync.get(['aseguir', 'cooldown'], function(items) {
     if (items.aseguir === undefined) {
-        chrome.storage.sync.set({'aseguir': true, 'cooldown': 5});
+        chrome.storage.sync.set({'aseguir': true, 'cooldown': 10});
         aseguir.checked = true;
-        cooldown.value = 5;
+        cooldown.value = 10;
     } else {
         aseguir.checked = items.aseguir;
         cooldown.value = items.cooldown;
